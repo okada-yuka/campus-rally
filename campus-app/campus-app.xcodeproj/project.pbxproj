@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7520262A8D0200D4FA1A /* AppDelegate.swift */; };
 		C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */; };
-		C14C7525262A8D0200D4FA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7524262A8D0200D4FA1A /* ViewController.swift */; };
+		C14C7525262A8D0200D4FA1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7524262A8D0200D4FA1A /* MapViewController.swift */; };
 		C14C7528262A8D0200D4FA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C7526262A8D0200D4FA1A /* Main.storyboard */; };
 		C14C752A262A8D0200D4FA1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14C7529262A8D0200D4FA1A /* Assets.xcassets */; };
 		C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */; };
+		C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7536262AA49400D4FA1A /* LibraryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C14C751D262A8D0200D4FA1A /* campus-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "campus-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14C7520262A8D0200D4FA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C14C7524262A8D0200D4FA1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C14C7524262A8D0200D4FA1A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C14C7527262A8D0200D4FA1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C14C7529262A8D0200D4FA1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C14C752C262A8D0200D4FA1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C14C752E262A8D0200D4FA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C14C7536262AA49400D4FA1A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				C14C7520262A8D0200D4FA1A /* AppDelegate.swift */,
 				C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */,
-				C14C7524262A8D0200D4FA1A /* ViewController.swift */,
+				C14C7524262A8D0200D4FA1A /* MapViewController.swift */,
 				C14C7526262A8D0200D4FA1A /* Main.storyboard */,
 				C14C7529262A8D0200D4FA1A /* Assets.xcassets */,
 				C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */,
 				C14C752E262A8D0200D4FA1A /* Info.plist */,
+				C14C7536262AA49400D4FA1A /* LibraryViewController.swift */,
 			);
 			path = "campus-app";
 			sourceTree = "<group>";
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C14C7525262A8D0200D4FA1A /* ViewController.swift in Sources */,
+				C14C7525262A8D0200D4FA1A /* MapViewController.swift in Sources */,
 				C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */,
+				C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */,
 				C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
