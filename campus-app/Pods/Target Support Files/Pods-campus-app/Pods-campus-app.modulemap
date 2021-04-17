@@ -1,0 +1,6 @@
+framework module Pods_campus_app {
+  umbrella header "Pods-campus-app-umbrella.h"
+
+  export *
+  module * { export * }
+}

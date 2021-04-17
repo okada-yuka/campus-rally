@@ -15,9 +15,13 @@
 		C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */; };
 		C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7536262AA49400D4FA1A /* LibraryViewController.swift */; };
 		C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */; };
+		F4460940F954910108C63806 /* Pods_campus_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606ACB2A102F0E659B759479 /* Pods_campus_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		606ACB2A102F0E659B759479 /* Pods_campus_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_campus_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91ED4D686915BE208FF9F8F3 /* Pods-campus-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-app.debug.xcconfig"; path = "Target Support Files/Pods-campus-app/Pods-campus-app.debug.xcconfig"; sourceTree = "<group>"; };
+		A5440A8FB68B7DA92B0E81B1 /* Pods-campus-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-app.release.xcconfig"; path = "Target Support Files/Pods-campus-app/Pods-campus-app.release.xcconfig"; sourceTree = "<group>"; };
 		C14C751D262A8D0200D4FA1A /* campus-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "campus-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14C7520262A8D0200D4FA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4460940F954910108C63806 /* Pods_campus_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		518653BF9A90C7AA27CA5086 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				606ACB2A102F0E659B759479 /* Pods_campus_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8C312CD9244577F49CC5E32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91ED4D686915BE208FF9F8F3 /* Pods-campus-app.debug.xcconfig */,
+				A5440A8FB68B7DA92B0E81B1 /* Pods-campus-app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C14C7514262A8D0200D4FA1A = {
 			isa = PBXGroup;
 			children = (
 				C14C751F262A8D0200D4FA1A /* campus-app */,
 				C14C751E262A8D0200D4FA1A /* Products */,
+				A8C312CD9244577F49CC5E32 /* Pods */,
+				518653BF9A90C7AA27CA5086 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C14C7531262A8D0200D4FA1A /* Build configuration list for PBXNativeTarget "campus-app" */;
 			buildPhases = (
+				FFE20D514DF0562A91575BC9 /* [CP] Check Pods Manifest.lock */,
 				C14C7519262A8D0200D4FA1A /* Sources */,
 				C14C751A262A8D0200D4FA1A /* Frameworks */,
 				C14C751B262A8D0200D4FA1A /* Resources */,
+				ABEA23A9140E39C502553408 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABEA23A9140E39C502553408 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-campus-app/Pods-campus-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-campus-app/Pods-campus-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-campus-app/Pods-campus-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE20D514DF0562A91575BC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-campus-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C14C7519262A8D0200D4FA1A /* Sources */ = {
@@ -291,6 +360,7 @@
 		};
 		C14C7532262A8D0200D4FA1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91ED4D686915BE208FF9F8F3 /* Pods-campus-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		C14C7533262A8D0200D4FA1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5440A8FB68B7DA92B0E81B1 /* Pods-campus-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
