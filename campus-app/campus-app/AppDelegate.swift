@@ -6,14 +6,50 @@
 //
 
 import UIKit
+import AWSCognitoIdentityProvider
+import AWSCore
+import AWSAppSync
+import AWSMobileClient
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var appSyncClient: AWSAppSyncClient?
+    
+    var id: String!
+    var username: String!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let accessKey = IAMConstans.accessKey
+        let secretKey = IAMConstans.secretKey
+        let provider = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
+
+        let configuration = AWSServiceConfiguration(region: AWSRegionType.APNortheast1,credentialsProvider: provider)
+
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+        // AppSyncの初期設定
+        do {
+            
+            // You can choose the directory in which AppSync stores its persistent cache databases
+            let cacheConfiguration = try AWSAppSyncCacheConfiguration()
+            
+            // Initialize the AWS AppSync configuration
+            let appSyncServiceConfig = try AWSAppSyncServiceConfig()
+            let appSyncConfig = try AWSAppSyncClientConfiguration(appSyncServiceConfig: appSyncServiceConfig, cacheConfiguration: cacheConfiguration)
+            
+            // Initialize the AWS AppSync client
+            appSyncClient = try AWSAppSyncClient(appSyncConfig: appSyncConfig)
+            
+            // Set id as the cache key for objects. See architecture section for details
+            appSyncClient?.apolloClient?.cacheKeyForObject = { $0["id"] }
+            
+            print("Initialized appsync client.")
+            
+        } catch {
+            print("Error initializing appsync client. \(error)")
+        }
         return true
     }
 

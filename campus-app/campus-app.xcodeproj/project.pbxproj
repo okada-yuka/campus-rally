@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */; };
 		C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7536262AA49400D4FA1A /* LibraryViewController.swift */; };
 		C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */; };
+		C14C7556262B0A4000D4FA1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7555262B0A4000D4FA1A /* Constants.swift */; };
+		C14C7559262B0C3A00D4FA1A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */; };
+		C14C755C262B0CA800D4FA1A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */; };
 		F4460940F954910108C63806 /* Pods_campus_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606ACB2A102F0E659B759479 /* Pods_campus_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		C14C752E262A8D0200D4FA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C14C7536262AA49400D4FA1A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TC1ViewController.swift; sourceTree = "<group>"; };
+		C14C7555262B0A4000D4FA1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../awsconfiguration.json; sourceTree = "<group>"; };
+		C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,6 @@
 				91ED4D686915BE208FF9F8F3 /* Pods-campus-app.debug.xcconfig */,
 				A5440A8FB68B7DA92B0E81B1 /* Pods-campus-app.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +90,7 @@
 		C14C751F262A8D0200D4FA1A /* campus-app */ = {
 			isa = PBXGroup;
 			children = (
+				C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */,
 				C14C7520262A8D0200D4FA1A /* AppDelegate.swift */,
 				C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */,
 				C14C7524262A8D0200D4FA1A /* MapViewController.swift */,
@@ -94,6 +100,8 @@
 				C14C752E262A8D0200D4FA1A /* Info.plist */,
 				C14C7536262AA49400D4FA1A /* LibraryViewController.swift */,
 				C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */,
+				C14C7555262B0A4000D4FA1A /* Constants.swift */,
+				C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */,
 			);
 			path = "campus-app";
 			sourceTree = "<group>";
@@ -157,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14C7559262B0C3A00D4FA1A /* awsconfiguration.json in Resources */,
 				C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */,
 				C14C752A262A8D0200D4FA1A /* Assets.xcassets in Resources */,
 				C14C7528262A8D0200D4FA1A /* Main.storyboard in Resources */,
@@ -217,6 +226,8 @@
 				C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */,
 				C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */,
 				C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */,
+				C14C755C262B0CA800D4FA1A /* NavigationViewController.swift in Sources */,
+				C14C7556262B0A4000D4FA1A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
