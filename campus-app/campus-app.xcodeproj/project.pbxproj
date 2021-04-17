@@ -14,6 +14,7 @@
 		C14C752A262A8D0200D4FA1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14C7529262A8D0200D4FA1A /* Assets.xcassets */; };
 		C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */; };
 		C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7536262AA49400D4FA1A /* LibraryViewController.swift */; };
+		C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C14C752C262A8D0200D4FA1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C14C752E262A8D0200D4FA1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C14C7536262AA49400D4FA1A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TC1ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */,
 				C14C752E262A8D0200D4FA1A /* Info.plist */,
 				C14C7536262AA49400D4FA1A /* LibraryViewController.swift */,
+				C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */,
 			);
 			path = "campus-app";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C14C7525262A8D0200D4FA1A /* MapViewController.swift in Sources */,
+				C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */,
 				C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */,
 				C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */,
 				C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DrawView: UIView {
+class DrawView_Library: UIView {
  
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -45,7 +45,7 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let drawView = DrawView(frame: self.view.bounds)
+        let drawView = DrawView_Library(frame: self.view.bounds)
         self.view.addSubview(drawView)
         // drawViewを最背面にする
         self.view.sendSubviewToBack(drawView)
