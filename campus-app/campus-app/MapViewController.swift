@@ -35,8 +35,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                let nextView = storyboard.instantiateViewController(withIdentifier: "PinView")
                // ③画面遷移
                self.present(nextView, animated: true, completion: nil)
-
-
     }
 
     //    ピンを立てる
