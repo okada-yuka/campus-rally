@@ -18,6 +18,9 @@
 		C14C7556262B0A4000D4FA1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7555262B0A4000D4FA1A /* Constants.swift */; };
 		C14C7559262B0C3A00D4FA1A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */; };
 		C14C755C262B0CA800D4FA1A /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */; };
+		C14C755F262BF26000D4FA1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C755E262BF26000D4FA1A /* HomeViewController.swift */; };
+		C19CDDBC262C02130000B369 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDBB262C02130000B369 /* ImageViewController.swift */; };
+		C19CDDE2262C049E0000B369 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = C19CDDE1262C049E0000B369 /* tessdata */; };
 		F4460940F954910108C63806 /* Pods_campus_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606ACB2A102F0E659B759479 /* Pods_campus_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,9 @@
 		C14C7555262B0A4000D4FA1A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../awsconfiguration.json; sourceTree = "<group>"; };
 		C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		C14C755E262BF26000D4FA1A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C19CDDBB262C02130000B369 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		C19CDDE1262C049E0000B369 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		C14C751F262A8D0200D4FA1A /* campus-app */ = {
 			isa = PBXGroup;
 			children = (
+				C19CDDE1262C049E0000B369 /* tessdata */,
 				C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */,
 				C14C7520262A8D0200D4FA1A /* AppDelegate.swift */,
 				C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */,
@@ -102,6 +109,8 @@
 				C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */,
 				C14C7555262B0A4000D4FA1A /* Constants.swift */,
 				C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */,
+				C14C755E262BF26000D4FA1A /* HomeViewController.swift */,
+				C19CDDBB262C02130000B369 /* ImageViewController.swift */,
 			);
 			path = "campus-app";
 			sourceTree = "<group>";
@@ -167,6 +176,7 @@
 			files = (
 				C14C7559262B0C3A00D4FA1A /* awsconfiguration.json in Resources */,
 				C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */,
+				C19CDDE2262C049E0000B369 /* tessdata in Resources */,
 				C14C752A262A8D0200D4FA1A /* Assets.xcassets in Resources */,
 				C14C7528262A8D0200D4FA1A /* Main.storyboard in Resources */,
 			);
@@ -222,8 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C14C7525262A8D0200D4FA1A /* MapViewController.swift in Sources */,
+				C19CDDBC262C02130000B369 /* ImageViewController.swift in Sources */,
 				C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */,
 				C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */,
+				C14C755F262BF26000D4FA1A /* HomeViewController.swift in Sources */,
 				C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */,
 				C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */,
 				C14C755C262B0CA800D4FA1A /* NavigationViewController.swift in Sources */,
@@ -384,7 +396,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yukaokada.campus-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -404,7 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yukaokada.campus-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

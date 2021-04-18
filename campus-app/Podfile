@@ -13,4 +13,5 @@ target 'campus-app' do
   pod 'AWSDynamoDB'
   pod 'AWSAppSync'
   pod 'Amplify'
+  pod 'SwiftyTesseract', '~> 2.0'
 end
