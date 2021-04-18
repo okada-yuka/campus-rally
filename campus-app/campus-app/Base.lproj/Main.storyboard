@@ -167,6 +167,48 @@
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="93.75"/>
         </scene>
+        <!--Map Kit View Controller-->
+        <scene sceneID="pZe-3F-L8L">
+            <objects>
+                <viewController id="dsE-5e-DZo" customClass="MapKitViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DDR-5S-yhr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Jqo-R0-eIy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NmR-ga-bTx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jr2-e0-4zI"/>
+                    <connections>
+                        <outlet property="mapView" destination="Jqo-R0-eIy" id="djz-7c-1iX"/>
+                        <segue destination="e4U-xs-asX" kind="show" identifier="toMap" id="I4J-T4-D0H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDC-M1-ozG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-765.21739130434787" y="392.41071428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pqd-4N-ynb">
+            <objects>
+                <viewController storyboardIdentifier="PinView" id="e4U-xs-asX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Eb-br-66z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Smt-0L-d5g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vp2-uA-2hZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0cU-gd-rx1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-736" y="1108"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7jr-jV-oUi">
             <objects>
@@ -178,7 +220,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="l2h-pW-Nbi" kind="relationship" relationship="rootViewController" id="PhD-nT-oai"/>
+                        <segue destination="dsE-5e-DZo" kind="relationship" relationship="rootViewController" id="XPv-78-euU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faI-0b-oBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -194,7 +236,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-vh-Djx">
-                                <rect key="frame" x="0.0" y="88" width="414" height="660"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
