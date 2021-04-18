@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7520262A8D0200D4FA1A /* AppDelegate.swift */; };
 		C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */; };
-		C14C7525262A8D0200D4FA1A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7524262A8D0200D4FA1A /* MapViewController.swift */; };
+		C14C7525262A8D0200D4FA1A /* DoshishaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7524262A8D0200D4FA1A /* DoshishaMapViewController.swift */; };
 		C14C7528262A8D0200D4FA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C7526262A8D0200D4FA1A /* Main.storyboard */; };
 		C14C752A262A8D0200D4FA1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14C7529262A8D0200D4FA1A /* Assets.xcassets */; };
 		C14C752D262A8D0200D4FA1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */; };
@@ -21,7 +21,8 @@
 		C14C755F262BF26000D4FA1A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C755E262BF26000D4FA1A /* HomeViewController.swift */; };
 		C19CDDBC262C02130000B369 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDBB262C02130000B369 /* ImageViewController.swift */; };
 		C19CDDE2262C049E0000B369 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = C19CDDE1262C049E0000B369 /* tessdata */; };
-		C19CDDE6262C3AA70000B369 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDE5262C3AA70000B369 /* MapKitViewController.swift */; };
+		C19CDDE6262C3AA70000B369 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDE5262C3AA70000B369 /* MapViewController.swift */; };
+		C19CDDEB262C484C0000B369 /* KochikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDEA262C484C0000B369 /* KochikanViewController.swift */; };
 		F4460940F954910108C63806 /* Pods_campus_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606ACB2A102F0E659B759479 /* Pods_campus_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +33,7 @@
 		C14C751D262A8D0200D4FA1A /* campus-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "campus-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14C7520262A8D0200D4FA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C14C7524262A8D0200D4FA1A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C14C7524262A8D0200D4FA1A /* DoshishaMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoshishaMapViewController.swift; sourceTree = "<group>"; };
 		C14C7527262A8D0200D4FA1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C14C7529262A8D0200D4FA1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C14C752C262A8D0200D4FA1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,7 +46,8 @@
 		C14C755E262BF26000D4FA1A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C19CDDBB262C02130000B369 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C19CDDE1262C049E0000B369 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
-		C19CDDE5262C3AA70000B369 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		C19CDDE5262C3AA70000B369 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C19CDDEA262C484C0000B369 /* KochikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KochikanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,18 +104,19 @@
 				C14C7558262B0C3A00D4FA1A /* awsconfiguration.json */,
 				C14C7520262A8D0200D4FA1A /* AppDelegate.swift */,
 				C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */,
-				C14C7524262A8D0200D4FA1A /* MapViewController.swift */,
+				C14C7524262A8D0200D4FA1A /* DoshishaMapViewController.swift */,
 				C14C7526262A8D0200D4FA1A /* Main.storyboard */,
+				C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */,
 				C14C7529262A8D0200D4FA1A /* Assets.xcassets */,
 				C14C752B262A8D0200D4FA1A /* LaunchScreen.storyboard */,
 				C14C752E262A8D0200D4FA1A /* Info.plist */,
-				C14C7536262AA49400D4FA1A /* LibraryViewController.swift */,
-				C14C753E262AB6D000D4FA1A /* TC1ViewController.swift */,
 				C14C7555262B0A4000D4FA1A /* Constants.swift */,
 				C14C755B262B0CA800D4FA1A /* NavigationViewController.swift */,
 				C14C755E262BF26000D4FA1A /* HomeViewController.swift */,
 				C19CDDBB262C02130000B369 /* ImageViewController.swift */,
-				C19CDDE5262C3AA70000B369 /* MapKitViewController.swift */,
+				C19CDDE5262C3AA70000B369 /* MapViewController.swift */,
+				C14C7536262AA49400D4FA1A /* LibraryViewController.swift */,
+				C19CDDEA262C484C0000B369 /* KochikanViewController.swift */,
 			);
 			path = "campus-app";
 			sourceTree = "<group>";
@@ -234,16 +237,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C14C7525262A8D0200D4FA1A /* MapViewController.swift in Sources */,
+				C14C7525262A8D0200D4FA1A /* DoshishaMapViewController.swift in Sources */,
 				C19CDDBC262C02130000B369 /* ImageViewController.swift in Sources */,
 				C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */,
 				C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */,
 				C14C755F262BF26000D4FA1A /* HomeViewController.swift in Sources */,
 				C14C7537262AA49400D4FA1A /* LibraryViewController.swift in Sources */,
-				C19CDDE6262C3AA70000B369 /* MapKitViewController.swift in Sources */,
+				C19CDDE6262C3AA70000B369 /* MapViewController.swift in Sources */,
 				C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */,
 				C14C755C262B0CA800D4FA1A /* NavigationViewController.swift in Sources */,
 				C14C7556262B0A4000D4FA1A /* Constants.swift in Sources */,
+				C19CDDEB262C484C0000B369 /* KochikanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
