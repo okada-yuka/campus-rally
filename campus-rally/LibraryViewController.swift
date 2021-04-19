@@ -8,7 +8,7 @@
 import UIKit
 
 class DrawView: UIView {
- 
+    
     override init(frame: CGRect) {
         super.init(frame: frame);
         self.backgroundColor = UIColor.clear;
@@ -44,6 +44,8 @@ class LibraryViewController: UIViewController {
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,6 +69,8 @@ class LibraryViewController: UIViewController {
         let image = UIImage(named: "checkbox_true")
         // Image Viewに読み込んだ画像をセット
         image1.image = image
+        appDelegate.library_quest[0] = true
+        check_clear()
     }
 
     @IBAction func subQuest_1(_ sender: Any) {
@@ -77,6 +81,8 @@ class LibraryViewController: UIViewController {
         let image = UIImage(named: "checkbox_true")
         // Image Viewに読み込んだ画像をセット
         image2.image = image
+        appDelegate.library_quest[1] = true
+        check_clear()
     }
     
     @IBAction func subQuest_2(_ sender: Any) {
@@ -87,6 +93,19 @@ class LibraryViewController: UIViewController {
         let image = UIImage(named: "checkbox_true")
         // Image Viewに読み込んだ画像をセット
         image3.image = image
+        appDelegate.library_quest[2] = true
+        check_clear()
+    }
+    
+    // clearかを判定し、その場合画像を表示する
+    func check_clear(){
+        let isClear = appDelegate.library_quest.allSatisfy { $0 == true }
+        if isClear == true{
+            print("clear")
+            imageView.image = UIImage(named: "mark_sumi_checked")
+        }else{
+            print("no")
+        }
     }
 }
 
