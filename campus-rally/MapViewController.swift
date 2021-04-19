@@ -87,12 +87,18 @@ extension MapViewController: MKMapViewDelegate{
             case "ラーネッド記念図書館":
                 print("ラーネッド")
                 button.addTarget(self, action: #selector(sendLocation), for: .touchUpInside)
+                //右側にボタンを追加
+                pinView.rightCalloutAccessoryView = button
             case "香知館　KC":
                 print("KC")
                 button.addTarget(self, action: #selector(sendLocation_kc), for: .touchUpInside)
+                //右側にボタンを追加
+                pinView.rightCalloutAccessoryView = button
             case "情報メディア館　JM":
                 print("JM")
                 button.addTarget(self, action: #selector(sendLocation_jm), for: .touchUpInside)
+                //右側にボタンを追加
+                pinView.rightCalloutAccessoryView = button
             default:
                 print("現在地")
                 pinView.image = UIImage(named: "purple")!
@@ -100,8 +106,7 @@ extension MapViewController: MKMapViewDelegate{
                         pinView.canShowCallout = true
         }
         //button.addTarget(self, action: #selector(sendLocation), for: .touchUpInside)
-        //右側にボタンを追加
-        pinView.rightCalloutAccessoryView = button
+        
         return pinView
     }
 
