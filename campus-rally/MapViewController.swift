@@ -15,6 +15,20 @@ class MapViewController: UIViewController {
     
     let annotation = MKPointAnnotation()
     
+    // 初期化
+    func initMap() {
+            // 縮尺を設定
+            var region:MKCoordinateRegion = mapView.region
+            region.span.latitudeDelta = 0.002
+            region.span.longitudeDelta = 0.002
+            mapView.setRegion(region,animated:true)
+
+            // 現在位置表示の有効化
+            mapView.showsUserLocation = true
+            // 現在位置設定（デバイスの動きとしてこの時の一回だけ中心位置が現在位置で更新される）
+            mapView.userTrackingMode = .follow
+        }
+    
     //    ピンを立てる
     func addAnnotation( latitude: CLLocationDegrees,longitude: CLLocationDegrees, title:String, subtitle:String) {
         mapView.delegate = self
@@ -28,9 +42,22 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        
+        initMap()
         mapView.delegate = self
         
-        self.goBackCenter()
+//        self.goBackCenter()
+        
+//        // 反映されていない・・
+//        // 縮尺を設定
+//        var region = mapView.region
+//        region.center = self.mapView.userLocation.coordinate
+//        region.span.latitudeDelta = 0.0001
+//        region.span.longitudeDelta = 0.0001
+//        // マップビューに縮尺を設定
+//        mapView.setRegion(region, animated:true)
         
         // コンパスの表示
         let compass = MKCompassButton(mapView: mapView)
@@ -52,10 +79,10 @@ class MapViewController: UIViewController {
 
     }
     
-    private func goBackCenter() {
-        self.mapView.setCenter(self.mapView.userLocation.coordinate, animated: false)
-        self.mapView.setUserTrackingMode(MKUserTrackingMode.followWithHeading, animated: false)
-    }
+//    private func goBackCenter() {
+//        self.mapView.setCenter(self.mapView.userLocation.coordinate, animated: false)
+//        self.mapView.setUserTrackingMode(MKUserTrackingMode.followWithHeading, animated: false)
+//    }
 
 
 }
@@ -64,10 +91,11 @@ extension MapViewController: MKMapViewDelegate{
     
     //アノテーションビューを返すメソッド
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        print("呼び出される")
-        print(annotation.title)
+
         //アノテーションビューを作成する。
         let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        
+        
         
         //吹き出しを表示可能に。
         pinView.canShowCallout = true
@@ -107,34 +135,36 @@ extension MapViewController: MKMapViewDelegate{
         }
         //button.addTarget(self, action: #selector(sendLocation), for: .touchUpInside)
         
+        
+        
         return pinView
     }
 
     //OKボタン押下時の処理
     @objc func sendLocation(){
         let storyboard: UIStoryboard = self.storyboard!
-               // ②遷移先ViewControllerのインスタンス取得
-               let nextView = storyboard.instantiateViewController(withIdentifier: "Library")
-               // ③画面遷移
-               self.present(nextView, animated: true, completion: nil)
+           // ②遷移先ViewControllerのインスタンス取得
+           let nextView = storyboard.instantiateViewController(withIdentifier: "Library")
+           // ③画面遷移
+           self.present(nextView, animated: true, completion: nil)
         print("図書館が呼ばれました")
     }
     
     @objc func sendLocation_kc(){
         let storyboard: UIStoryboard = self.storyboard!
-               // ②遷移先ViewControllerのインスタンス取得
-               let nextView = storyboard.instantiateViewController(withIdentifier: "KC")
-               // ③画面遷移
-               self.present(nextView, animated: true, completion: nil)
+           // ②遷移先ViewControllerのインスタンス取得
+           let nextView = storyboard.instantiateViewController(withIdentifier: "KC")
+           // ③画面遷移
+           self.present(nextView, animated: true, completion: nil)
         print("KCが呼ばれました")
     }
     
     @objc func sendLocation_jm(){
         let storyboard: UIStoryboard = self.storyboard!
-               // ②遷移先ViewControllerのインスタンス取得
-               let nextView = storyboard.instantiateViewController(withIdentifier: "JM")
-               // ③画面遷移
-               self.present(nextView, animated: true, completion: nil)
+           // ②遷移先ViewControllerのインスタンス取得
+           let nextView = storyboard.instantiateViewController(withIdentifier: "JM")
+           // ③画面遷移
+           self.present(nextView, animated: true, completion: nil)
         print("KCが呼ばれました")
     }
 }

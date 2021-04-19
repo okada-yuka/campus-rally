@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // クエストのクリア状態を保持する
     var kc_clear: Bool!
     var library_clear: Bool!
+    var kc_quest: [Bool] =  [false, false, false]
+    var library_quest: [Bool] =  [false, false, false]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
