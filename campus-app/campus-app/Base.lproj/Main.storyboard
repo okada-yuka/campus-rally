@@ -167,6 +167,31 @@
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="93.75"/>
         </scene>
+        <!--New Map View Controller-->
+        <scene sceneID="xge-Bb-jKb">
+            <objects>
+                <viewController id="zyD-wh-tnh" customClass="NewMapViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m83-t8-7RO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xEQ-Eg-Wp5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zOy-0W-gux"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="21J-FF-kBY"/>
+                    <connections>
+                        <outlet property="mapView" destination="xEQ-Eg-Wp5" id="RgF-bv-sxN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dl-at-OBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1494.2028985507247" y="59.598214285714285"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="pZe-3F-L8L">
             <objects>
@@ -198,7 +223,7 @@
             <objects>
                 <viewController storyboardIdentifier="PinView" id="e4U-xs-asX" customClass="KochikanViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Eb-br-66z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TW-Sq-HYf">
@@ -257,7 +282,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dsE-5e-DZo" kind="relationship" relationship="rootViewController" id="ugK-oL-dTO"/>
+                        <segue destination="zyD-wh-tnh" kind="relationship" relationship="rootViewController" id="amt-TR-8kg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faI-0b-oBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
