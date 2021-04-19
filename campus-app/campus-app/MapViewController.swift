@@ -48,6 +48,7 @@ class MapViewController: UIViewController {
         
         addAnnotation(latitude: 34.80141666723223,  longitude: 135.77055102690483, title: "ラーネッド記念図書館", subtitle: "")
         addAnnotation(latitude: 34.80080759819321,  longitude: 135.76798711156198, title: "香知館　KC", subtitle: "社会情報学研究室 - SIL")
+        addAnnotation(latitude: 34.802973289643795, longitude: 135.77098865560282, title: "情報メディア館　JM", subtitle: "")
 
 
     }
@@ -76,7 +77,7 @@ extension MapViewController: MKMapViewDelegate{
         button.frame = CGRect(x:0,y:0,width:80,height:40)
         button.setTitle("クエスト", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.backgroundColor = UIColor.blue
+        button.backgroundColor = #colorLiteral(red: 0.6784008145, green: 0.5490569472, blue: 0.7371662259, alpha: 1)
         
         pinView.image = UIImage(named: "pin")!
                 pinView.annotation = annotation
@@ -90,8 +91,11 @@ extension MapViewController: MKMapViewDelegate{
             case "香知館　KC":
                 print("KC")
                 button.addTarget(self, action: #selector(sendLocation_kc), for: .touchUpInside)
+            case "情報メディア館　JM":
+                print("JM")
+                button.addTarget(self, action: #selector(sendLocation_jm), for: .touchUpInside)
             default:
-                print("どちらでもないです")
+                print("現在地")
                 pinView.image = UIImage(named: "purple")!
                         pinView.annotation = annotation
                         pinView.canShowCallout = true
@@ -104,13 +108,27 @@ extension MapViewController: MKMapViewDelegate{
 
     //OKボタン押下時の処理
     @objc func sendLocation(){
+        let storyboard: UIStoryboard = self.storyboard!
+               // ②遷移先ViewControllerのインスタンス取得
+               let nextView = storyboard.instantiateViewController(withIdentifier: "Library")
+               // ③画面遷移
+               self.present(nextView, animated: true, completion: nil)
         print("図書館が呼ばれました")
     }
     
     @objc func sendLocation_kc(){
         let storyboard: UIStoryboard = self.storyboard!
                // ②遷移先ViewControllerのインスタンス取得
-               let nextView = storyboard.instantiateViewController(withIdentifier: "PinView")
+               let nextView = storyboard.instantiateViewController(withIdentifier: "KC")
+               // ③画面遷移
+               self.present(nextView, animated: true, completion: nil)
+        print("KCが呼ばれました")
+    }
+    
+    @objc func sendLocation_jm(){
+        let storyboard: UIStoryboard = self.storyboard!
+               // ②遷移先ViewControllerのインスタンス取得
+               let nextView = storyboard.instantiateViewController(withIdentifier: "JM")
                // ③画面遷移
                self.present(nextView, animated: true, completion: nil)
         print("KCが呼ばれました")

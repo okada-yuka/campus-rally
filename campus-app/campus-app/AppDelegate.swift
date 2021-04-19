@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var username: String!
     
     var pin_title: String!
+    
+    // クエストのクリア状態を保持する
+    var kc_clear: Bool!
+    var library_clear: Bool!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

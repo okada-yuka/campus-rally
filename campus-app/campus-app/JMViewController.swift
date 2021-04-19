@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DrawView_Kochikan: UIView {
+class DrawView_JM: UIView {
  
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -22,7 +22,7 @@ class DrawView_Kochikan: UIView {
         
         // ここにUIBezierPathを記述する
         // 角が丸い四角形（短形）
-        let roundrRectangle = UIBezierPath(roundedRect: CGRect(x: 20, y: 420, width: 350, height: 350), cornerRadius: 10.0)
+        let roundrRectangle = UIBezierPath(roundedRect: CGRect(x: 30, y: 420, width: 330, height: 300), cornerRadius: 10.0)
         // 内側の色
         #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
         // 内側を塗りつぶす
@@ -37,7 +37,7 @@ class DrawView_Kochikan: UIView {
  
 }
 
-class KochikanViewController: UIViewController {
+class JMViewController: UIViewController {
 
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
@@ -48,7 +48,7 @@ class KochikanViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let drawView = DrawView_Kochikan(frame: self.view.bounds)
+        let drawView = DrawView_JM(frame: self.view.bounds)
         self.view.addSubview(drawView)
         // drawViewを最背面にする
         self.view.sendSubviewToBack(drawView)
@@ -71,7 +71,7 @@ class KochikanViewController: UIViewController {
 
 }
 
-extension KochikanViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension JMViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
     }

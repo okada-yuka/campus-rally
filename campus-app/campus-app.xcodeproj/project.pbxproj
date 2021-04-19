@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C14B305D262C7BC80098BA5B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14B305C262C7BC80098BA5B /* MapViewController.swift */; };
+		C14B3065262D6DB80098BA5B /* JMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14B3064262D6DB80098BA5B /* JMViewController.swift */; };
 		C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7520262A8D0200D4FA1A /* AppDelegate.swift */; };
 		C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */; };
 		C14C7525262A8D0200D4FA1A /* DoshishaMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14C7524262A8D0200D4FA1A /* DoshishaMapViewController.swift */; };
@@ -23,7 +24,7 @@
 		C19CDDBC262C02130000B369 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDBB262C02130000B369 /* ImageViewController.swift */; };
 		C19CDDE2262C049E0000B369 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = C19CDDE1262C049E0000B369 /* tessdata */; };
 		C19CDDE6262C3AA70000B369 /* notMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDE5262C3AA70000B369 /* notMapViewController.swift */; };
-		C19CDDEB262C484C0000B369 /* KochikanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDEA262C484C0000B369 /* KochikanViewController.swift */; };
+		C19CDDEB262C484C0000B369 /* KCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19CDDEA262C484C0000B369 /* KCViewController.swift */; };
 		F4460940F954910108C63806 /* Pods_campus_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606ACB2A102F0E659B759479 /* Pods_campus_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		91ED4D686915BE208FF9F8F3 /* Pods-campus-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-app.debug.xcconfig"; path = "Target Support Files/Pods-campus-app/Pods-campus-app.debug.xcconfig"; sourceTree = "<group>"; };
 		A5440A8FB68B7DA92B0E81B1 /* Pods-campus-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-app.release.xcconfig"; path = "Target Support Files/Pods-campus-app/Pods-campus-app.release.xcconfig"; sourceTree = "<group>"; };
 		C14B305C262C7BC80098BA5B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C14B3064262D6DB80098BA5B /* JMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMViewController.swift; sourceTree = "<group>"; };
 		C14C751D262A8D0200D4FA1A /* campus-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "campus-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14C7520262A8D0200D4FA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C14C7522262A8D0200D4FA1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +51,7 @@
 		C19CDDBB262C02130000B369 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C19CDDE1262C049E0000B369 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		C19CDDE5262C3AA70000B369 /* notMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notMapViewController.swift; sourceTree = "<group>"; };
-		C19CDDEA262C484C0000B369 /* KochikanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KochikanViewController.swift; sourceTree = "<group>"; };
+		C19CDDEA262C484C0000B369 /* KCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +120,9 @@
 				C19CDDBB262C02130000B369 /* ImageViewController.swift */,
 				C19CDDE5262C3AA70000B369 /* notMapViewController.swift */,
 				C14C7536262AA49400D4FA1A /* LibraryViewController.swift */,
-				C19CDDEA262C484C0000B369 /* KochikanViewController.swift */,
+				C19CDDEA262C484C0000B369 /* KCViewController.swift */,
 				C14B305C262C7BC80098BA5B /* MapViewController.swift */,
+				C14B3064262D6DB80098BA5B /* JMViewController.swift */,
 			);
 			path = "campus-app";
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				C14B305D262C7BC80098BA5B /* MapViewController.swift in Sources */,
 				C14C7525262A8D0200D4FA1A /* DoshishaMapViewController.swift in Sources */,
+				C14B3065262D6DB80098BA5B /* JMViewController.swift in Sources */,
 				C19CDDBC262C02130000B369 /* ImageViewController.swift in Sources */,
 				C14C753F262AB6D000D4FA1A /* TC1ViewController.swift in Sources */,
 				C14C7521262A8D0200D4FA1A /* AppDelegate.swift in Sources */,
@@ -251,7 +255,7 @@
 				C14C7523262A8D0200D4FA1A /* SceneDelegate.swift in Sources */,
 				C14C755C262B0CA800D4FA1A /* NavigationViewController.swift in Sources */,
 				C14C7556262B0A4000D4FA1A /* Constants.swift in Sources */,
-				C19CDDEB262C484C0000B369 /* KochikanViewController.swift in Sources */,
+				C19CDDEB262C484C0000B369 /* KCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

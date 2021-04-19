@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DrawView_Library: UIView {
+class DrawView_KC: UIView {
  
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -37,7 +37,7 @@ class DrawView_Library: UIView {
  
 }
 
-class LibraryViewController: UIViewController {
+class KCViewController: UIViewController {
 
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
@@ -48,7 +48,7 @@ class LibraryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        let drawView = DrawView_Library(frame: self.view.bounds)
+        let drawView = DrawView_KC(frame: self.view.bounds)
         self.view.addSubview(drawView)
         // drawViewを最背面にする
         self.view.sendSubviewToBack(drawView)
@@ -71,7 +71,7 @@ class LibraryViewController: UIViewController {
 
 }
 
-extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension KCViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
     }
