@@ -167,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="93.75"/>
         </scene>
-        <!--New Map View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="xge-Bb-jKb">
             <objects>
-                <viewController id="zyD-wh-tnh" customClass="NewMapViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zyD-wh-tnh" customClass="MapViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m83-t8-7RO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,17 +185,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="21J-FF-kBY"/>
                     <connections>
-                        <outlet property="mapView" destination="xEQ-Eg-Wp5" id="RgF-bv-sxN"/>
+                        <outlet property="mapView" destination="xEQ-Eg-Wp5" id="tUh-7Y-giH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dl-at-OBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1494.2028985507247" y="59.598214285714285"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Not Map View Controller-->
         <scene sceneID="pZe-3F-L8L">
             <objects>
-                <viewController id="dsE-5e-DZo" customClass="MapViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dsE-5e-DZo" customClass="notMapViewController" customModule="campus_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDR-5S-yhr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,7 +210,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jr2-e0-4zI"/>
                     <connections>
-                        <outlet property="mapView" destination="A1j-aM-Y8u" id="Agd-CS-xZH"/>
+                        <outlet property="mapView" destination="A1j-aM-Y8u" id="2HC-Ej-lsL"/>
                         <segue destination="e4U-xs-asX" kind="show" identifier="toMap" id="I4J-T4-D0H"/>
                     </connections>
                 </viewController>
@@ -282,12 +282,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zyD-wh-tnh" kind="relationship" relationship="rootViewController" id="U0r-4G-7IN"/>
+                        <segue destination="zyD-wh-tnh" kind="relationship" relationship="rootViewController" id="2uB-RS-Am2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faI-0b-oBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+            <point key="canvasLocation" x="138" y="-130"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="0O8-XJ-njj">
