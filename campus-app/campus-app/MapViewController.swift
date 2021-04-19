@@ -33,6 +33,15 @@ class MapViewController: UIViewController {
         
         self.goBackCenter()
         
+        // コンパスの表示
+        let compass = MKCompassButton(mapView: mapView)
+        compass.compassVisibility = .adaptive
+        // 画面の右下に表示する
+        compass.frame = CGRect(x: 300, y: 700, width: 40, height: 40)
+        self.view.addSubview(compass)
+        // デフォルトのコンパスを非表示にする
+        mapView.showsCompass = false
+        
         // NavigationBarを表示しない
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
