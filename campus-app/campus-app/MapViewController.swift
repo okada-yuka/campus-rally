@@ -11,8 +11,11 @@ import CoreLocation
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
+        
         if annotation is MKUserLocation {
             //return nil so map view draws "blue dot" for standard user location
             return nil
@@ -35,6 +38,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                let nextView = storyboard.instantiateViewController(withIdentifier: "PinView")
                // ③画面遷移
                self.present(nextView, animated: true, completion: nil)
+
     }
 
     //    ピンを立てる
@@ -45,6 +49,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         annotation.title = title
         annotation.subtitle = subtitle
         self.mapView.addAnnotation(annotation)
+        
     }
 
 
