@@ -20,7 +20,7 @@ class ImageViewController: UIViewController {
         let start = Date()
 
         //let fileName = "kochikan.JPG"
-        guard let image = UIImage(named: "20130929_ab6b3a") else { return }
+        guard let image = UIImage(named: "スクリーンショット 2021-04-19 10.55.37") else { return }
 
         swiftyTesseract.performOCR(on: image) { recognizedString in
             guard let text = recognizedString else { return }
