@@ -36,6 +36,7 @@ class MapViewController: UIViewController {
         annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
         annotation.title = title
         annotation.subtitle = subtitle
+        
         self.mapView.addAnnotation(annotation)
         
     }
@@ -72,9 +73,9 @@ class MapViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
-        addAnnotation(latitude: 34.80141666723223,  longitude: 135.77055102690483, title: "ラーネッド記念図書館", subtitle: "")
-        addAnnotation(latitude: 34.80080759819321,  longitude: 135.76798711156198, title: "香知館　KC", subtitle: "社会情報学研究室 - SIL")
-        addAnnotation(latitude: 34.802973289643795, longitude: 135.77098865560282, title: "情報メディア館　JM", subtitle: "")
+        addAnnotation(latitude: 34.80141666723223,  longitude: 135.77055102690483, title: "ラーネッド記念図書館", subtitle: "LIBRARY")
+        addAnnotation(latitude: 34.80080759819321,  longitude: 135.76798711156198, title: "香知館", subtitle: "KC")
+        addAnnotation(latitude: 34.802973289643795, longitude: 135.77098865560282, title: "情報メディア館", subtitle: "JM")
 
 
     }
@@ -95,18 +96,19 @@ extension MapViewController: MKMapViewDelegate{
         //アノテーションビューを作成する。
         let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: nil)
         
-        
-        
         //吹き出しを表示可能に。
         pinView.canShowCallout = true
-        
+
         let button = UIButton()
         button.frame = CGRect(x:0,y:0,width:80,height:40)
-        button.setTitle("クエスト", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
+//        button.setTitle("クエスト", for: .normal)
+//
+//        button.setTitleColor(UIColor.white, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.6784008145, green: 0.5490569472, blue: 0.7371662259, alpha: 1)
         
-        pinView.image = UIImage(named: "pin")!
+        button.setImage(UIImage(named: "pin_purple")!, for: .normal)
+        
+        pinView.image = UIImage(named: "pin_purple")!
                 pinView.annotation = annotation
                 pinView.canShowCallout = true
         
@@ -129,7 +131,7 @@ extension MapViewController: MKMapViewDelegate{
                 pinView.rightCalloutAccessoryView = button
             default:
                 print("現在地")
-                pinView.image = UIImage(named: "purple")!
+                pinView.image = UIImage(named: "current_icon")!
                         pinView.annotation = annotation
                         pinView.canShowCallout = true
         }
