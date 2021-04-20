@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="MPLUSRounded1c-Bold.ttf">
+            <string>RoundedMplus1c-Bold</string>
+        </array>
         <array key="MPLUSRounded1c-Regular.ttf">
             <string>RoundedMplus1c-Regular</string>
         </array>
@@ -117,16 +120,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wE7-Ja-aRt">
-                                <rect key="frame" x="131" y="593" width="153" height="30"/>
+                                <rect key="frame" x="123" y="591" width="170" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="被験者実験に参加する"/>
                                 <connections>
                                     <action selector="subQuest_1:" destination="2MD-MU-XhL" eventType="touchUpInside" id="kPr-XU-VPc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zlu-7j-iLj">
-                                <rect key="frame" x="131" y="555" width="108" height="30"/>
+                                <rect key="frame" x="127" y="553" width="119" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="看板を撮影する"/>
                                 <connections>
                                     <action selector="startCamera:" destination="2MD-MU-XhL" eventType="touchUpInside" id="SqI-3D-BvU"/>
@@ -143,13 +148,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="香知館 KOCHIKAN" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FX-r8-WUB">
                                 <rect key="frame" x="147" y="448" width="214" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Bold" family="Rounded Mplus 1c Bold" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-u9-EEV">
-                                <rect key="frame" x="131" y="639" width="199" height="30"/>
+                                <rect key="frame" x="122" y="637" width="221" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="社会情報学研究室を見学する"/>
                                 <connections>
                                     <action selector="subQuest_2:" destination="2MD-MU-XhL" eventType="touchUpInside" id="l9l-Mb-BZk"/>
@@ -157,6 +163,10 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-Jy-Gzz">
                                 <rect key="frame" x="124" y="433" width="142" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KC" translatesAutoresizingMaskIntoConstraints="NO" id="kfI-lK-8Sf">
+                                <rect key="frame" x="16" y="433" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -198,24 +208,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZJ-b1-Ef0">
-                                <rect key="frame" x="138" y="637" width="215" height="30"/>
+                                <rect key="frame" x="127" y="635" width="238" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="ラーニングコモンズを利用する"/>
                                 <connections>
                                     <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="USB-Lw-zek"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFn-PG-Mz9">
-                                <rect key="frame" x="138" y="591" width="77" height="30"/>
+                                <rect key="frame" x="136" y="589" width="85" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="本を借りる"/>
                                 <connections>
                                     <action selector="subQuest_1:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="Tnl-lH-gjf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUr-Qt-cKF">
-                                <rect key="frame" x="138" y="553" width="108" height="30"/>
+                                <rect key="frame" x="134" y="551" width="119" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="看板を撮影する"/>
                                 <connections>
                                     <action selector="startCamera:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="8Md-Ym-jon"/>
@@ -226,12 +239,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ラーネッド記念図書館" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op1-dz-6kj">
-                                <rect key="frame" x="35" y="455" width="320" height="42"/>
+                                <rect key="frame" x="35" y="455" width="320" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Bold" family="Rounded Mplus 1c Bold" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="図書館" translatesAutoresizingMaskIntoConstraints="NO" id="X01-OM-WIj">
+                                <rect key="frame" x="35" y="434" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pbs-r3-Yv7"/>
                     </view>
@@ -266,8 +283,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do5-t2-mey">
-                                <rect key="frame" x="138" y="607" width="137" height="30"/>
+                                <rect key="frame" x="132" y="605" width="152" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="学内LANに接続する"/>
                                 <connections>
                                     <action selector="subQuest_1:" destination="2ol-9G-sQx" eventType="touchUpInside" id="Dkg-ti-aOF"/>
@@ -275,8 +293,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-uX-Ev3">
-                                <rect key="frame" x="137" y="559" width="108" height="30"/>
+                                <rect key="frame" x="133" y="557" width="119" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="看板を撮影する"/>
                                 <connections>
                                     <action selector="startCamera:" destination="2ol-9G-sQx" eventType="touchUpInside" id="Jxy-8K-NK3"/>
@@ -288,8 +307,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4F-ii-JLD">
-                                <rect key="frame" x="137" y="645" width="138" height="30"/>
+                                <rect key="frame" x="131" y="643" width="153" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <state key="normal" title="プリンタを利用する"/>
                                 <connections>
                                     <action selector="subQuest_2:" destination="gsX-8J-Nzs" eventType="touchUpInside" id="45O-hM-MY5"/>
@@ -301,14 +321,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="情報メディア館" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdB-6N-WNT">
-                                <rect key="frame" x="115" y="459" width="224" height="42"/>
+                                <rect key="frame" x="115" y="459" width="224" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Bold" family="Rounded Mplus 1c Bold" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="swg-mI-XTW">
                                 <rect key="frame" x="124" y="434" width="142" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JM" translatesAutoresizingMaskIntoConstraints="NO" id="59s-CG-niC">
+                                <rect key="frame" x="39" y="434" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -327,9 +351,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="JM" width="190" height="190"/>
+        <image name="KC" width="190" height="190"/>
         <image name="checkbox_false" width="1299" height="1299"/>
         <image name="homeIndicator" width="134" height="5"/>
         <image name="white" width="356" height="103"/>
+        <image name="図書館" width="190" height="190"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
