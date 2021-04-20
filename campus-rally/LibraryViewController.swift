@@ -43,6 +43,8 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var mainQuest: UIButton!
+    @IBOutlet weak var subQuest_1: UIButton!
     @IBOutlet weak var subQuest_2: UIButton!
     
     
@@ -76,6 +78,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
         image1.image = image
         appDelegate.library_quest[0] = true
         check_clear()
+        mainQuest.isEnabled = false
     }
 
     @IBAction func subQuest_1(_ sender: Any) {
@@ -88,6 +91,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
         image2.image = image
         appDelegate.library_quest[1] = true
         check_clear()
+        self.subQuest_1.isEnabled = false
     }
     
     @IBAction func subQuest_2(_ sender: Any) {
@@ -122,8 +126,9 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
                     // Image Viewに読み込んだ画像をセット
                     self.image3.image = image
                     self.appDelegate.library_quest[2] = true
-                    self.check_clear()
                     self.subQuest_2.isEnabled = false
+
+                    
                 }else{
                     
                 }
@@ -150,13 +155,15 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     }
     
     // clearかを判定し、その場合画像を表示する
-    func check_clear(){
+    func check_clear() -> Bool{
         let isClear = appDelegate.library_quest.allSatisfy { $0 == true }
         if isClear == true{
             print("clear")
             imageView.image = UIImage(named: "mark_sumi_checked")
+            return true
         }else{
             print("no")
+            return false
         }
     }
 }
