@@ -53,6 +53,7 @@
                     <navigationItem key="navigationItem" id="eQP-ZE-61B"/>
                     <connections>
                         <outlet property="mapView" destination="u3O-kc-ij5" id="9IN-HY-nNW"/>
+                        <outlet property="usernameLabel" destination="hrV-0F-G83" id="bfb-kw-M70"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

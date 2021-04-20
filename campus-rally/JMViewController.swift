@@ -7,12 +7,15 @@
 
 import UIKit
 
+
 class JMViewController: UIViewController {
 
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,7 @@ class JMViewController: UIViewController {
         self.view.addSubview(drawView)
         // drawViewを最背面にする
         self.view.sendSubviewToBack(drawView)
+        
     }
     
 
