@@ -13,6 +13,8 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     let annotation = MKPointAnnotation()
     
     // 初期化
@@ -80,6 +82,8 @@ class MapViewController: UIViewController {
 
     }
     
+
+    
 //    private func goBackCenter() {
 //        self.mapView.setCenter(self.mapView.userLocation.coordinate, animated: false)
 //        self.mapView.setUserTrackingMode(MKUserTrackingMode.followWithHeading, animated: false)
@@ -104,14 +108,14 @@ extension MapViewController: MKMapViewDelegate{
 //        button.setTitle("クエスト", for: .normal)
 //
 //        button.setTitleColor(UIColor.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.6784008145, green: 0.5490569472, blue: 0.7371662259, alpha: 1)
+//        button.backgroundColor = #colorLiteral(red: 0.6784008145, green: 0.5490569472, blue: 0.7371662259, alpha: 1)
         
         button.setImage(UIImage(named: "pin_purple")!, for: .normal)
         
         pinView.image = UIImage(named: "pin_purple")!
-                pinView.annotation = annotation
-                pinView.canShowCallout = true
-        
+        pinView.annotation = annotation
+        pinView.canShowCallout = true
+
         // 施設ごとにボタン押下時の処理をする
         switch annotation.title {
             case "ラーネッド記念図書館":
@@ -119,12 +123,12 @@ extension MapViewController: MKMapViewDelegate{
                 button.addTarget(self, action: #selector(sendLocation), for: .touchUpInside)
                 //右側にボタンを追加
                 pinView.rightCalloutAccessoryView = button
-            case "香知館　KC":
+            case "香知館":
                 print("KC")
                 button.addTarget(self, action: #selector(sendLocation_kc), for: .touchUpInside)
                 //右側にボタンを追加
                 pinView.rightCalloutAccessoryView = button
-            case "情報メディア館　JM":
+            case "情報メディア館":
                 print("JM")
                 button.addTarget(self, action: #selector(sendLocation_jm), for: .touchUpInside)
                 //右側にボタンを追加
