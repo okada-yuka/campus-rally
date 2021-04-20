@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MPLUSRounded1c-Regular.ttf">
+            <string>RoundedMplus1c-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,14 +26,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-xx-bAB">
-                                <rect key="frame" x="15" y="88" width="361" height="116"/>
+                                <rect key="frame" x="15" y="55" width="361" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-0F-G83">
-                                <rect key="frame" x="74" y="112" width="76" height="21"/>
+                                <rect key="frame" x="74" y="79" width="76" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キャンパスを回ってクエストをクリアしよう！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-Zd-dng">
+                                <rect key="frame" x="24" y="125" width="357" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -55,12 +67,38 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tnE-Mn-I33"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="utm-tW-giV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOq-kI-oeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-591.304347826087" y="38.839285714285715"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="tuo-Yw-RJ9">
+            <objects>
+                <viewController id="L8f-9n-T86" customClass="TestViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4A9-ix-Dau">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-BX-YEw">
+                                <rect key="frame" x="172" y="379" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushButtonWithSender:" destination="L8f-9n-T86" eventType="touchUpInside" id="VWQ-Ay-5Yy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pdx-wS-8yC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dl7-j2-mEi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAt-Bc-yM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1388" y="366"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ARb-GL-wwK">
@@ -194,6 +232,7 @@
                         <outlet property="image2" destination="JKP-mS-Mwu" id="Wfp-J6-nCn"/>
                         <outlet property="image3" destination="3rN-ee-apx" id="ZLY-j3-E7i"/>
                         <outlet property="imageView" destination="K4w-0e-R7I" id="NHb-Fl-kE8"/>
+                        <outlet property="subQuest_2" destination="lZJ-b1-Ef0" id="lAl-cR-OX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6Y-SP-EFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

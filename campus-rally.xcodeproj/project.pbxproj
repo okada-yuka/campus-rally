@@ -16,6 +16,15 @@
 		C14064E6262DA22700989D4F /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14064E5262DA22700989D4F /* LibraryViewController.swift */; };
 		C14064E9262DAB1900989D4F /* KCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14064E8262DAB1900989D4F /* KCViewController.swift */; };
 		C14064EC262DADCB00989D4F /* JMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14064EB262DADCB00989D4F /* JMViewController.swift */; };
+		C1406503262ECB7D00989D4F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1406502262ECB7D00989D4F /* TestViewController.swift */; };
+		C1406532262F09A700989D4F /* KosugiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1406531262F09A700989D4F /* KosugiMaru-Regular.ttf */; };
+		C140653F262F0A4100989D4F /* MPLUSRounded1c-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1406538262F0A4000989D4F /* MPLUSRounded1c-Regular.ttf */; };
+		C1406540262F0A4100989D4F /* MPLUSRounded1c-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1406539262F0A4000989D4F /* MPLUSRounded1c-Black.ttf */; };
+		C1406541262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C140653A262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf */; };
+		C1406542262F0A4100989D4F /* MPLUSRounded1c-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C140653B262F0A4100989D4F /* MPLUSRounded1c-Light.ttf */; };
+		C1406543262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C140653C262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf */; };
+		C1406544262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C140653D262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf */; };
+		C1406545262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C140653E262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf */; };
 		F95A70B55C57445C6437D251 /* Pods_campus_rally.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C51C214EC150A1ED426922 /* Pods_campus_rally.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +43,15 @@
 		C14064E5262DA22700989D4F /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		C14064E8262DAB1900989D4F /* KCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCViewController.swift; sourceTree = "<group>"; };
 		C14064EB262DADCB00989D4F /* JMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMViewController.swift; sourceTree = "<group>"; };
+		C1406502262ECB7D00989D4F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C1406531262F09A700989D4F /* KosugiMaru-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KosugiMaru-Regular.ttf"; sourceTree = "<group>"; };
+		C1406538262F0A4000989D4F /* MPLUSRounded1c-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-Regular.ttf"; sourceTree = "<group>"; };
+		C1406539262F0A4000989D4F /* MPLUSRounded1c-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-Black.ttf"; sourceTree = "<group>"; };
+		C140653A262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-Medium.ttf"; sourceTree = "<group>"; };
+		C140653B262F0A4100989D4F /* MPLUSRounded1c-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-Light.ttf"; sourceTree = "<group>"; };
+		C140653C262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C140653D262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-Bold.ttf"; sourceTree = "<group>"; };
+		C140653E262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MPLUSRounded1c-Thin.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +99,22 @@
 				C14064A6262DA03200989D4F /* AppDelegate.swift */,
 				C14064A8262DA03200989D4F /* SceneDelegate.swift */,
 				C14064AA262DA03200989D4F /* MapViewController.swift */,
+				C1406531262F09A700989D4F /* KosugiMaru-Regular.ttf */,
 				C14064AC262DA03200989D4F /* Main.storyboard */,
 				C14064AF262DA03300989D4F /* Assets.xcassets */,
 				C14064B1262DA03300989D4F /* LaunchScreen.storyboard */,
+				C1406539262F0A4000989D4F /* MPLUSRounded1c-Black.ttf */,
+				C140653D262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf */,
+				C140653C262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf */,
+				C140653B262F0A4100989D4F /* MPLUSRounded1c-Light.ttf */,
+				C140653A262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf */,
+				C1406538262F0A4000989D4F /* MPLUSRounded1c-Regular.ttf */,
+				C140653E262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf */,
 				C14064B4262DA03300989D4F /* Info.plist */,
 				C14064E5262DA22700989D4F /* LibraryViewController.swift */,
 				C14064E8262DAB1900989D4F /* KCViewController.swift */,
 				C14064EB262DADCB00989D4F /* JMViewController.swift */,
+				C1406502262ECB7D00989D4F /* TestViewController.swift */,
 			);
 			path = "campus-rally";
 			sourceTree = "<group>";
@@ -159,9 +186,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1406540262F0A4100989D4F /* MPLUSRounded1c-Black.ttf in Resources */,
+				C1406544262F0A4100989D4F /* MPLUSRounded1c-Bold.ttf in Resources */,
+				C1406541262F0A4100989D4F /* MPLUSRounded1c-Medium.ttf in Resources */,
+				C1406543262F0A4100989D4F /* MPLUSRounded1c-ExtraBold.ttf in Resources */,
+				C1406545262F0A4100989D4F /* MPLUSRounded1c-Thin.ttf in Resources */,
+				C140653F262F0A4100989D4F /* MPLUSRounded1c-Regular.ttf in Resources */,
+				C1406532262F09A700989D4F /* KosugiMaru-Regular.ttf in Resources */,
 				C14064B3262DA03300989D4F /* LaunchScreen.storyboard in Resources */,
 				C14064B0262DA03300989D4F /* Assets.xcassets in Resources */,
 				C14064AE262DA03200989D4F /* Main.storyboard in Resources */,
+				C1406542262F0A4100989D4F /* MPLUSRounded1c-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1406503262ECB7D00989D4F /* TestViewController.swift in Sources */,
 				C14064E9262DAB1900989D4F /* KCViewController.swift in Sources */,
 				C14064AB262DA03200989D4F /* MapViewController.swift in Sources */,
 				C14064A7262DA03200989D4F /* AppDelegate.swift in Sources */,
