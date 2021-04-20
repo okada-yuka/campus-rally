@@ -37,14 +37,19 @@ class DrawView: UIView {
  
 }
 
-class LibraryViewController: UIViewController {
+class LibraryViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image2: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var subQuest_2: UIButton!
+    
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    var alert: UIAlertController!
+    var alertTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,14 +92,61 @@ class LibraryViewController: UIViewController {
     
     @IBAction func subQuest_2(_ sender: Any) {
         // 確認のポップアップをつけてみてもいいかも
+
+        alert = UIAlertController(
+            title: "ラーニングコモンズを利用する",
+            message: "ラーニングコモンズは\n何階にありましたか？",
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addTextField(
+            configurationHandler: {(textField: UITextField!) in
+                self.alertTextField = textField
+                // textField.placeholder = "Mike"
+                // textField.isSecureTextEntry = true
+        })
+        alert.addAction(
+            UIAlertAction(
+                title: "Cancel",
+                style: UIAlertAction.Style.cancel,
+                handler: nil))
+        alert.addAction(
+            UIAlertAction(
+                title: "OK",
+                style: UIAlertAction.Style.default) { _ in
+                
+                if (self.textFieldShouldReturn(textField: self.alertTextField)) {
+                    print("正解です")
+                    
+                    // checkboxにチェックをつける（画像の結果を受け取るところに移動予定）
+                    // 画像を読み込み
+                    let image = UIImage(named: "checkbox_true")
+                    // Image Viewに読み込んだ画像をセット
+                    self.image3.image = image
+                    self.appDelegate.library_quest[2] = true
+                    self.check_clear()
+                    self.subQuest_2.isEnabled = false
+                }else{
+                    
+                }
+                
+                
+
+            }
+        )
+
+        self.present(alert, animated: true, completion: nil)
         
-        // checkboxにチェックをつける（画像の結果を受け取るところに移動予定）
-        // 画像を読み込み
-        let image = UIImage(named: "checkbox_true")
-        // Image Viewに読み込んだ画像をセット
-        image3.image = image
-        appDelegate.library_quest[2] = true
-        check_clear()
+    
+    }
+    
+    //Returnキー押下時の呼び出しメソッド
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if(textField.text == "1" || textField.text == "1階") {
+            return true
+        } else {
+            alert.message = "回答が間違っています"
+            print("間違っている")
+            return false
+        }
     }
     
     // clearかを判定し、その場合画像を表示する
