@@ -13,8 +13,12 @@ import AWSMobileClient
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var usernameLabel: UILabel!
+
     @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var usernameButton: UIButton!
+    
+    var signOutAlert: UIAlertController!
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -60,7 +64,8 @@ class MapViewController: UIViewController {
                         print(AWSMobileClient.default().username)
                         print(self.appDelegate.username)
                         print("Logged In")
-                        self.usernameLabel.text = self.appDelegate.username + "さん"
+
+                        self.usernameButton.setTitle(self.appDelegate.username + "さん", for: .normal)
                     }
                     
                 case .signedOut:
@@ -70,7 +75,8 @@ class MapViewController: UIViewController {
                                 self.appDelegate.username = AWSMobileClient.default().username
                                 print(AWSMobileClient.default().username)
                                 print("Sign In")
-                                self.usernameLabel.text = self.appDelegate.username + "さん"
+
+                                self.usernameButton.setTitle(self.appDelegate.username + "さん", for: .normal)
                             }
 
                         }
@@ -122,6 +128,47 @@ class MapViewController: UIViewController {
         addAnnotation(latitude: 34.80141666723223,  longitude: 135.77055102690483, title: "ラーネッド記念図書館", subtitle: "LIBRARY")
         addAnnotation(latitude: 34.80080759819321,  longitude: 135.76798711156198, title: "香知館", subtitle: "KC")
         addAnnotation(latitude: 34.802973289643795, longitude: 135.77098865560282, title: "情報メディア館", subtitle: "JM")
+        
+        // SignOutのアラートを表示する
+        //アラートコントローラーを作成する。
+        signOutAlert = UIAlertController(title: "サインアウト", message: "本当にサインアウトしますか？", preferredStyle: UIAlertController.Style.alert)
+
+        //「続けるボタン」のアラートアクションを作成する。
+        let alertAction = UIAlertAction(
+        title: "続ける",
+            style: UIAlertAction.Style.default,
+        handler: { action in
+            // サインアウト処理
+            AWSMobileClient.sharedInstance().signOut()
+
+            
+            // サインイン画面を表示
+            AWSMobileClient.sharedInstance().showSignIn(navigationController: self.navigationController!, { (signInState, error) in
+                
+                // 初期表示画面（GoalView）に遷移する
+                self.navigationController?.popViewController(animated: true)
+                
+                if let signInState = signInState {
+                    print("SignInしました")
+                    self.appDelegate.username = AWSMobileClient.default().username
+                    self.usernameButton.setTitle(self.appDelegate.username + "さん", for: .normal)
+                } else if let error = error {
+                    print("error logging in: \(error.localizedDescription)")
+                }
+            })
+        })
+
+
+        //「キャンセルボタン」のアラートアクションを作成する。
+        let alertAction2 = UIAlertAction(
+            title: "キャンセル",
+            style: UIAlertAction.Style.cancel,
+            handler: nil
+        )
+
+        //アラートアクションを追加する。
+        signOutAlert.addAction(alertAction)
+        signOutAlert.addAction(alertAction2)
 
 
     }
@@ -144,6 +191,9 @@ class MapViewController: UIViewController {
         }
     }
 
+    @IBAction func pushUsernameButton(_ sender: Any) {
+        self.present(signOutAlert, animated: true, completion:nil)
+    }
     
 //    private func goBackCenter() {
 //        self.mapView.setCenter(self.mapView.userLocation.coordinate, animated: false)
