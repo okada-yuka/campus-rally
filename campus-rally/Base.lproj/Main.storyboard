@@ -19,7 +19,7 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,9 +29,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="white" translatesAutoresizingMaskIntoConstraints="NO" id="nl1-xx-bAB">
-                                <rect key="frame" x="15" y="55" width="361" height="116"/>
+                                <rect key="frame" x="7" y="50" width="376" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キャンパスを回ってクエストをクリアしよう！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-Zd-dng">
+                                <rect key="frame" x="27" y="124" width="337" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-0F-G83">
                                 <rect key="frame" x="74" y="79" width="76" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -39,13 +46,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キャンパスを回ってクエストをクリアしよう！" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-Zd-dng">
-                                <rect key="frame" x="24" y="125" width="357" height="20"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSO-aB-wct">
+                                <rect key="frame" x="206" y="89" width="150" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="RoundedMplus1c-Regular" family="Rounded Mplus 1c" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="progressTintColor" red="0.65933728219999999" green="0.55704480410000001" blue="0.72550880910000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,6 +58,7 @@
                     <navigationItem key="navigationItem" id="eQP-ZE-61B"/>
                     <connections>
                         <outlet property="mapView" destination="u3O-kc-ij5" id="9IN-HY-nNW"/>
+                        <outlet property="progressBar" destination="SSO-aB-wct" id="3mb-xZ-N5c"/>
                         <outlet property="usernameLabel" destination="hrV-0F-G83" id="bfb-kw-M70"/>
                     </connections>
                 </viewController>
@@ -107,7 +113,7 @@
         <!--View Controller-->
         <scene sceneID="ARb-GL-wwK">
             <objects>
-                <viewController storyboardIdentifier="KC" id="2MD-MU-XhL" customClass="KCViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2MD-MU-XhL" customClass="KCViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="JM" id="ql2-zQ-39O">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,6 +184,9 @@
                         <outlet property="image2" destination="Peh-Ry-Wqq" id="goI-Kl-7Ok"/>
                         <outlet property="image3" destination="NMb-zM-5Fq" id="kKf-fb-bMi"/>
                         <outlet property="imageView" destination="hPY-fr-J5a" id="saS-sU-NtS"/>
+                        <outlet property="mainQuest" destination="Zlu-7j-iLj" id="frb-5i-uy5"/>
+                        <outlet property="subQuest_1" destination="wE7-Ja-aRt" id="eDm-wR-ouS"/>
+                        <outlet property="subQuest_2" destination="GeR-u9-EEV" id="tko-5g-2Ja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ode-cP-PcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -187,7 +196,7 @@
         <!--Library View Controller-->
         <scene sceneID="R67-ne-UFd">
             <objects>
-                <viewController storyboardIdentifier="Library" id="gsX-8J-Nzs" customClass="LibraryViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Library" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gsX-8J-Nzs" customClass="LibraryViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWP-FD-iI4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +279,7 @@
         <!--View Controller-->
         <scene sceneID="Kcj-8L-sL8">
             <objects>
-                <viewController storyboardIdentifier="JM" id="2ol-9G-sQx" customClass="JMViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2ol-9G-sQx" customClass="JMViewController" customModule="campus_rally" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b59-rd-eg0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,6 +353,9 @@
                         <outlet property="image2" destination="kBa-Ix-aUM" id="mTO-VG-lUP"/>
                         <outlet property="image3" destination="NAT-QK-tXV" id="Md3-ba-7Bb"/>
                         <outlet property="imageView" destination="Dyj-0N-pyU" id="Fpo-pK-dSI"/>
+                        <outlet property="mainQuest" destination="7oT-uX-Ev3" id="S6C-Oi-GRG"/>
+                        <outlet property="subQuest_1" destination="do5-t2-mey" id="Q5q-ba-ShO"/>
+                        <outlet property="subQuest_2" destination="L4F-ii-JLD" id="fyb-wB-69z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8x-yC-kNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

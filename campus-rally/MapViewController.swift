@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
@@ -85,13 +86,14 @@ class MapViewController: UIViewController {
                 print(error.localizedDescription)
             }
             
-            print("username")
-            print(AWSMobileClient.default().username)
-            print("username")
         }
         
         initMap()
         mapView.delegate = self
+        
+        // プログレスバーを太くする
+        progressBar.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        progressBar.progress = 0
         
 //        self.goBackCenter()
         
@@ -124,6 +126,23 @@ class MapViewController: UIViewController {
 
     }
     
+    // カメラを起動するとMapに戻るため、Progressが更新されてしまう（どちらに合わせるか・・閉じる時にprogressの値を更新するようにするか）
+    override func viewDidAppear(_ animated: Bool) {
+        print("mapに戻ってきた")
+        super.viewDidAppear(animated)
+        if #available(iOS 13.0, *) {
+            presentingViewController?.endAppearanceTransition()
+        }
+
+        if (self.appDelegate.camera_flag == false){
+            print(self.appDelegate.progress_sum)
+            self.appDelegate.progress += self.appDelegate.progress_sum
+            progressBar.progress = self.appDelegate.progress
+            self.appDelegate.progress_sum = 0
+        }else{
+            self.appDelegate.camera_flag = false
+        }
+    }
 
     
 //    private func goBackCenter() {
@@ -209,10 +228,10 @@ extension MapViewController: MKMapViewDelegate{
     
     @objc func sendLocation_jm(){
         let storyboard: UIStoryboard = self.storyboard!
-           // ②遷移先ViewControllerのインスタンス取得
-           let nextView = storyboard.instantiateViewController(withIdentifier: "JM")
-           // ③画面遷移
-           self.present(nextView, animated: true, completion: nil)
+       // ②遷移先ViewControllerのインスタンス取得
+       let nextView = storyboard.instantiateViewController(withIdentifier: "JM")
+       // ③画面遷移
+       self.present(nextView, animated: true, completion: nil)
         print("KCが呼ばれました")
     }
 }

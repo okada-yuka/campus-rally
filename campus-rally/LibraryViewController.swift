@@ -46,12 +46,14 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mainQuest: UIButton!
     @IBOutlet weak var subQuest_1: UIButton!
     @IBOutlet weak var subQuest_2: UIButton!
+
     
     
     var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var alert: UIAlertController!
     var alertTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +66,32 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
         self.view.sendSubviewToBack(drawView)
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Mapに戻った時にMapViewControllerのViewWillAppearを呼び出す（iOS13以降で必要）
+        if #available(iOS 13.0, *) {
+            presentingViewController?.beginAppearanceTransition(true, animated: animated)
+            presentingViewController?.endAppearanceTransition()
+        }
+        
+        
+//        // カメラ起動でない場合のみprogressを反映
+//        if (camera_flag == false){
+//            print("カメラ起動でないです")
+//            print(self.appDelegate.progress_sum)
+//            self.appDelegate.progress += self.appDelegate.progress_sum
+//        }else{
+//            print("カメラ起動です")
+//            print(self.appDelegate.progress)
+//            camera_flag = false
+//        }
+        
+    }
+    
     @IBAction func startCamera(_ sender: Any) {
+        
+        self.appDelegate.camera_flag = true
         let pc = UIImagePickerController()
         pc.sourceType = .camera
         pc.delegate = self
@@ -79,6 +105,17 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
         appDelegate.library_quest[0] = true
         check_clear()
         mainQuest.isEnabled = false
+        print("0.05をたす")
+        self.appDelegate.progress_sum += 0.05
+
+        
+//        let storyboard: UIStoryboard = self.storyboard!
+//        let mapViewController: MapViewController = storyboard.instantiateViewController(withIdentifier: "Map") as! MapViewController
+//        mapViewController.progressBar.progress += 0.5
+        
+        //self.appDelegate.progress += progress_sum
+        
+        
     }
 
     @IBAction func subQuest_1(_ sender: Any) {
@@ -92,6 +129,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
         appDelegate.library_quest[1] = true
         check_clear()
         self.subQuest_1.isEnabled = false
+        self.appDelegate.progress_sum += 0.05
     }
     
     @IBAction func subQuest_2(_ sender: Any) {
@@ -127,8 +165,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
                     self.image3.image = image
                     self.appDelegate.library_quest[2] = true
                     self.subQuest_2.isEnabled = false
-
-                    
+                    self.appDelegate.progress_sum += 0.05
                 }else{
                     
                 }
@@ -166,6 +203,7 @@ class LibraryViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
+
 }
 
 extension LibraryViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

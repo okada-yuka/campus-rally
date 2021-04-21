@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var kc_quest: [Bool] =  [false, false, false]
     var library_quest: [Bool] =  [false, false, false]
 
+    var progress: Float = 0
+    var progress_sum: Float = 0
+    var camera_flag: Bool = false
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
